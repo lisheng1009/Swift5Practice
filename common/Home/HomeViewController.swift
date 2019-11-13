@@ -158,6 +158,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = HeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 80))
         header.showAdv = {
+            self.versionIsBasic = false
             self.advLoad()
         }
         header.showBasic = {
